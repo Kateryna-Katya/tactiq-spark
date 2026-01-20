@@ -1,56 +1,408 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/tactiq-spark/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tactiq Spark — AI для обычных людей</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='2' width='28' height='28' fill='black'/%3E%3Cpath d='M16 6l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z' fill='%23ADFF2F'/%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     <script type="module" crossorigin src="/tactiq-spark/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/tactiq-spark/assets/styles-guStct1H.css">
+    <link rel="stylesheet" crossorigin href="/tactiq-spark/assets/styles-Bl7TzSxz.css">
   </head>
   <body>
     <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
+  <div class="container header__container">
+      <a href="/" class="logo">
+          Tactiq<span>Spark</span>
       </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
+
+      <nav class="nav">
+          <ul class="nav__list">
+              <li><a href="#home" class="nav__link">Главная</a></li>
+              <li><a href="#tools" class="nav__link">Нейросети</a></li>
+              <li><a href="#education" class="nav__link">Обучение</a></li>
+              <li><a href="#practices" class="nav__link">Практики</a></li>
+              <li><a href="#blog" class="nav__link">Блог</a></li>
+          </ul>
+      </nav>
+
+      <div class="header__actions">
+          <a href="#contact" class="btn btn--primary">Начать</a>
+          <button class="burger" aria-label="Меню">
+              <span></span>
+          </button>
+      </div>
   </div>
 </header>
-
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu__content">
+      <ul class="mobile-menu__list">
+          <li><a href="#home" class="mobile-menu__link">Главная</a></li>
+          <li><a href="#tools" class="mobile-menu__link">Нейросети</a></li>
+          <li><a href="#education" class="mobile-menu__link">Обучение</a></li>
+          <li><a href="#practices" class="mobile-menu__link">Практики</a></li>
+          <li><a href="#blog" class="mobile-menu__link">Блог</a></li>
+          <li><a href="#contact" class="btn btn--primary">Начать</a></li>
+      </ul>
+  </div>
+</div>
 
     <main>
       <!-- Loads the specified .html file -->
-      
+      <section class="hero" id="home">
+  <div class="container hero__container">
+      <div class="hero__content">
+          <div class="hero__badge">Доступно в Европе 2026</div>
+          <h1 class="hero__title">
+              <span class="word">AI-инструменты</span> <br>
+              <span class="word">для</span> <span class="word">реальных</span> <span class="word">задач</span>
+          </h1>
+          <p class="hero__subtitle">
+              Технологии нового поколения, которые работают на вас. Пошаговый путь, понятный каждому. Начните использовать ИИ сегодня, чтобы построить карьеру завтра.
+          </p>
+          <div class="hero__btns">
+              <a href="#contact" class="btn btn--primary">Начать сейчас</a>
+              <a href="#practices" class="btn btn--secondary">Узнать детали</a>
+          </div>
+      </div>
+
+      <div class="hero__visual">
+          <div class="parallax-element shape-1"></div>
+          <div class="parallax-element shape-2"></div>
+          <div class="hero__card">
+              <div class="card__header">
+                  <span class="card__dot"></span>
+                  <span class="card__dot"></span>
+                  <span class="card__dot"></span>
+              </div>
+              <div class="card__body">
+                  <div class="card__line" style="width: 80%;"></div>
+                  <div class="card__line" style="width: 60%;"></div>
+                  <div class="card__line card__line--accent" style="width: 90%;"></div>
+                  <div class="card__status">AI Processing...</div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<section class="features" id="tools">
+  <div class="container">
+      <div class="section-header">
+          <h2 class="section-title">Практики, применимые <br><span class="highlight">уже сегодня</span></h2>
+          <p class="section-desc">ИИ — это не магия, а передовая цифровая инфраструктура. Мы покажем, как интегрировать её в вашу жизнь без боли.</p>
+      </div>
+
+      <div class="features__grid">
+          <div class="feature-card reveal">
+              <div class="feature-card__icon">
+                  <i data-lucide="briefcase"></i>
+              </div>
+              <h3 class="feature-card__title">Карьера и работа</h3>
+              <p class="feature-card__text">Постройте карьеру, которая работает на вас. Автоматизация отчетов, анализ данных и написание кода даже если вы не программист.</p>
+              <div class="feature-card__label">Экономия 10ч/нед</div>
+          </div>
+
+          <div class="feature-card reveal">
+              <div class="feature-card__icon">
+                  <i data-lucide="sparkles"></i>
+              </div>
+              <h3 class="feature-card__title">Быт и задачи</h3>
+              <p class="feature-card__text">Быстрый и лёгкий старт: планирование бюджета, личный ассистент по питанию или генерация идей для подарков за 2 минуты.</p>
+              <div class="feature-card__label">Легко без опыта</div>
+          </div>
+
+          <div class="feature-card reveal">
+              <div class="feature-card__icon">
+                  <i data-lucide="palette"></i>
+              </div>
+              <h3 class="feature-card__title">Творчество</h3>
+              <p class="feature-card__text">Воплотите мечты в реальность. Создание визуального контента, музыки и текстов мирового уровня без специальных навыков.</p>
+              <div class="feature-card__label">Новые горизонты</div>
+          </div>
+      </div>
+  </div>
+</section>
+<div class="marquee-wrapper">
+  <div class="marquee">
+      <span>Платформа года 2026 • Технологии, которые работают на вас • AI-инструменты для реальных задач • Платформа уже доступна в Европе • Оценить перспективы проекта • </span>
+      <span>Платформа года 2026 • Технологии, которые работают на вас • AI-инструменты для реальных задач • Платформа уже доступна в Европе • Оценить перспективы проекта • </span>
+  </div>
+</div>
+
+<section class="how-it-works" id="education">
+  <div class="container">
+      <div class="section-header">
+          <h2 class="section-title">Пошаговый путь, <br><span class="highlight">понятный каждому</span></h2>
+      </div>
+
+      <div class="steps-grid">
+          <div class="step-card reveal">
+              <div class="step-card__num">01</div>
+              <h3 class="step-card__title">Выбор вектора</h3>
+              <p class="step-card__text">Оценить перспективы проекта и выбрать подходящий инструмент под вашу задачу. Без сложных терминов и кода.</p>
+              <div class="step-card__footer">Старт за 2 минуты</div>
+          </div>
+
+          <div class="step-card reveal">
+              <div class="step-card__num">02</div>
+              <h3 class="step-card__title">Удобная адаптация</h3>
+              <p class="step-card__text">Интегрируем нейросети в ваш рабочий процесс. Практики, применимые уже сегодня для роста дохода.</p>
+              <div class="step-card__footer">Экспертная поддержка</div>
+          </div>
+
+          <div class="step-card reveal">
+              <div class="step-card__num">03</div>
+              <h3 class="step-card__title">Результат и рост</h3>
+              <p class="step-card__text">Переосмыслите подход к развитию. Получайте больше информации и свободного времени за счет ИИ.</p>
+              <div class="step-card__footer">Проверенный партнер</div>
+          </div>
+      </div>
+
+      <div class="cta-block reveal">
+          <p>Хотите получить персональную стратегию развития?</p>
+          <a href="#contact" class="btn btn--primary">Бесплатная консультация</a>
+      </div>
+  </div>
+</section>
+<section class="innovations" id="practices">
+  <div class="container">
+      <div class="section-header">
+          <h2 class="section-title">Решения, которые <br><span class="highlight">меняют правила игры</span></h2>
+          <p class="section-desc">Оцените перспективы проекта через призму конкретных инструментов. Мы отобрали лучшее для 2026 года.</p>
+      </div>
+
+      <div class="accordion">
+          <div class="accordion__item reveal">
+              <div class="accordion__header">
+                  <span class="accordion__num">01</span>
+                  <h3 class="accordion__name">Генерация контента</h3>
+                  <div class="accordion__icon"><i data-lucide="plus"></i></div>
+              </div>
+              <div class="accordion__content">
+                  <div class="accordion__inner">
+                      <div class="accordion__text">
+                          <p>Создавайте тексты, сценарии и посты, которые невозможно отличить от человеческих. Технология нового поколения позволяет экономить до 80% времени на рутине.</p>
+                          <ul class="accordion__list">
+                              <li>Автоматизация SMM</li>
+                              <li>Написание лонгридов</li>
+                              <li>Локализация под страны ЕС</li>
+                          </ul>
+                      </div>
+                      <div class="accordion__img">
+                          <img src="/tactiq-spark/assets/one-BcrdEk8w.jpg" alt="AI Content">
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="accordion__item reveal">
+              <div class="accordion__header">
+                  <span class="accordion__num">02</span>
+                  <h3 class="accordion__name">Визуальные решения</h3>
+                  <div class="accordion__icon"><i data-lucide="plus"></i></div>
+              </div>
+              <div class="accordion__content">
+                  <div class="accordion__inner">
+                      <div class="accordion__text">
+                          <p>Инновационная технология генерации изображений и видео. Ваши идеи воплощаются в реальность за секунды. Платформа уже доступна в Европе для всех пользователей.</p>
+                          <ul class="accordion__list">
+                              <li>Фотореалистичные рендеры</li>
+                              <li>Генерация коротких видео (Reels/Ads)</li>
+                              <li>Брендинг и логотипы</li>
+                          </ul>
+                      </div>
+                      <div class="accordion__img">
+                          <img src="/tactiq-spark/assets/two-D78EWNaU.jpg" alt="AI Visuals">
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="accordion__item reveal">
+              <div class="accordion__header">
+                  <span class="accordion__num">03</span>
+                  <h3 class="accordion__name">Аналитика и Данные</h3>
+                  <div class="accordion__icon"><i data-lucide="plus"></i></div>
+              </div>
+              <div class="accordion__content">
+                  <div class="accordion__inner">
+                      <div class="accordion__text">
+                          <p>Передовая цифровая инфраструктура для анализа больших данных. Получайте выжимки из документов и стратегии роста на базе инноваций.</p>
+                          <ul class="accordion__list">
+                              <li>Анализ конкурентов</li>
+                              <li>Прогноз трендов 2026</li>
+                              <li>Умный поиск по архивам</li>
+                          </ul>
+                      </div>
+                      <div class="accordion__img">
+                          <img src="/tactiq-spark/assets/three-BaBT2zpp.jpg" alt="AI Data">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<section class="blog" id="blog">
+  <div class="container">
+      <div class="section-header">
+          <h2 class="section-title">Свежие знания <br><span class="highlight">из мира ИИ</span></h2>
+          <p class="section-desc">Стратегия роста на базе инноваций: читайте наши последние исследования и гайды.</p>
+      </div>
+
+      <div class="blog-grid">
+          <article class="blog-card blog-card--featured reveal">
+              <div class="blog-card__image">
+                  <img src="/tactiq-spark/assets/four-BnJsRaFx.jpg" alt="AI 2026">
+                  <div class="blog-card__tag">Главное</div>
+              </div>
+              <div class="blog-card__content">
+                  <span class="blog-card__date">20 Января, 2026</span>
+                  <h3 class="blog-card__title">ИИ в 2026 году: как не остаться за бортом цифровой революции</h3>
+                  <p class="blog-card__excerpt">Разбираем, почему передовая цифровая инфраструктура становится доступной каждому и как начать использовать её для пассивного дохода уже сегодня.</p>
+                  <a href="#contact" class="blog-card__link">Читать статью <i data-lucide="arrow-up-right"></i></a>
+              </div>
+          </article>
+
+          <article class="blog-card reveal">
+              <div class="blog-card__image">
+                  <img src="/tactiq-spark/assets/five-CVmiDdv9.jpg" alt="AI Career">
+              </div>
+              <div class="blog-card__content">
+                  <span class="blog-card__date">15 Января, 2026</span>
+                  <h3 class="blog-card__title">Постройте карьеру, которая работает на вас</h3>
+                  <p class="blog-card__excerpt">Топ-5 инструментов для автоматизации офисной рутины без навыков программирования.</p>
+                  <a href="#contact" class="blog-card__link">Подробнее <i data-lucide="arrow-up-right"></i></a>
+              </div>
+          </article>
+
+          <article class="blog-card reveal">
+              <div class="blog-card__image">
+                  <img src="/tactiq-spark/assets/six-BTtcpzWv.jpg" alt="AI Design">
+              </div>
+              <div class="blog-card__content">
+                  <span class="blog-card__date">10 Января, 2026</span>
+                  <h3 class="blog-card__title">Воплотите мечты в реальность с Midjourney</h3>
+                  <p class="blog-card__excerpt">Как создавать визуальный контент мирового уровня за 2 минуты.</p>
+                  <a href="#contact" class="blog-card__link">Подробнее <i data-lucide="arrow-up-right"></i></a>
+              </div>
+          </article>
+      </div>
+  </div>
+</section>
+<section class="contact" id="contact">
+  <div class="container contact__container">
+      <div class="contact__info reveal">
+          <h2 class="section-title">Готовы к <br><span class="highlight">трансформации?</span></h2>
+          <p class="contact__text">
+              Оставьте заявку на бесплатную консультацию. Мы поможем подобрать AI-инструменты под ваши конкретные задачи. Платформа доступна в странах ЕС и Великобритании.
+          </p>
+          <div class="contact__details">
+              <div class="contact__item">
+                  <i data-lucide="phone"></i>
+                  <span>+49 30 901820</span> </div>
+              <div class="contact__item">
+                  <i data-lucide="mail"></i>
+                  <span>support@tactiq-spark.blog</span>
+              </div>
+              <div class="contact__item">
+                  <i data-lucide="map-pin"></i>
+                  <span>Friedrichstraße 176-179, 10117 Berlin, Germany</span> </div>
+          </div>
+      </div>
+
+      <div class="contact__form-wrapper reveal">
+          <form class="form" id="ai-form">
+              <div class="form__group">
+                  <label for="name" class="form__label">Ваше имя</label>
+                  <input type="text" id="name" name="name" class="form__input" placeholder="Иван Иванов" required>
+              </div>
+
+              <div class="form__group">
+                  <label for="email" class="form__label">Email</label>
+                  <input type="email" id="email" name="email" class="form__input" placeholder="hello@example.com" required>
+              </div>
+
+              <div class="form__group">
+                  <label for="phone" class="form__label">Телефон (только цифры)</label>
+                  <input type="tel" id="phone" name="phone" class="form__input" placeholder="4930901820" required>
+              </div>
+
+              <div class="form__group">
+                  <label class="form__label">Защита от ботов: <span id="captcha-question"></span></label>
+                  <input type="number" id="captcha-answer" class="form__input" placeholder="Введите ответ" required>
+              </div>
+
+              <div class="form__checkbox-group">
+                  <input type="checkbox" id="agree" required>
+                  <label for="agree">Я согласен с <a href="./personal-data-policy.html">политикой конфиденциальности</a></label>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--full">Запросить доступ</button>
+
+              <div id="form-success" class="form__message form__message--success">
+                  ⚡ Спасибо! Мы свяжемся с вами в течение 15 минут.
+              </div>
+          </form>
+      </div>
+  </div>
+</section>
     </main>
 
     <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+  <div class="container footer__grid">
+      <div class="footer__about">
+          <a href="/" class="logo logo--footer">Tactiq<span>Spark</span></a>
+          <p class="footer__text">
+              Технологии нового поколения для реальных задач. Делаем ИИ понятным и доступным для каждого.
+          </p>
+          <div class="footer__contacts">
+              <p><strong>Адрес:</strong> 221B Baker St, London NW1 6XE, UK</p>
+              <p><strong>Email:</strong> <a href="mailto:hello@tactiq-spark.blog">hello@tactiq-spark.blog</a></p>
+              <p><strong>Тел:</strong> <a href="tel:+442079460958">+44 20 7946 0958</a></p>
+          </div>
+      </div>
+
+      <div class="footer__nav">
+          <h4 class="footer__title">Навигация</h4>
+          <ul class="footer__list">
+              <li><a href="#home">Главная</a></li>
+              <li><a href="#tools">Инструменты</a></li>
+              <li><a href="#education">Обучение</a></li>
+              <li><a href="#blog">Блог</a></li>
+          </ul>
+      </div>
+
+      <div class="footer__legal">
+          <h4 class="footer__title">Юридическая информация</h4>
+          <ul class="footer__list">
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Use</a></li>
+              <li><a href="cookies.html">Cookie Policy</a></li>
+              <li><a href="return.html">Return Policy</a></li>
+              <li><a href="disclaimer.html">Disclaimer</a></li>
+              <li><a href="personal-data-policy.html">Data Policy</a></li>
+          </ul>
+      </div>
+  </div>
+  <div class="container footer__bottom">
+      <p>&copy; 2026 Tactiq Spark. Платформа уже доступна в Европе.</p>
   </div>
 </footer>
-
+    <div class="cookie-popup" id="cookiePopup">
+      <div class="cookie-popup__inner">
+          <p class="cookie-popup__text">
+              Этот сайт использует cookies для улучшения работы. Платформа уже доступна в Европе.
+              Подробнее — в нашей <a href="./cookies.html">Cookie политике</a>.
+          </p>
+          <button class="btn btn--primary btn--sm" id="acceptCookies">Принять</button>
+      </div>
+  </div>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
   </body>
 </html>
