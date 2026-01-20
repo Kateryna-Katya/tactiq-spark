@@ -1028,7 +1028,7 @@ h1, h2, h3, h4, .logo {
 }
 
 .pages h1 {
-  font-size: clamp(32px, 5vw, 64px);
+  font-size: clamp(24px, 5vw, 64px);
   margin-bottom: 40px;
   background: var(--accent-color);
   display: inline-block;
